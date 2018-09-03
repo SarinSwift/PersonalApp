@@ -9,6 +9,7 @@
 import UIKit
 
 var categories = ["Beverages", "Bread/Bakery", "Canned/Jarred Goods", "Dairy", "Dry/Baking Goods", "Frozen Foods", "Meats", "Produce", "Fruits", "Vegetables"]
+//var myImages = []
 var myIndex = 0
 
 class TableViewController: UITableViewController {
@@ -27,9 +28,11 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) 
         
         cell.textLabel?.text = categories[indexPath.row]
+//        cell.imageView.image = [UIImage imageNamed:]
         
         return cell
     }
+    
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
