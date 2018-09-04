@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var Button: [UIButton]!
     @IBOutlet weak var QLabel: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
     
     var Questions = [Question]()
     var QNumber = Int()
@@ -27,11 +28,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Questions = [Question(Question: "WHats up?", Answers: ["aaa", "bbb", "ccc", "ddd"], Answer: 0), Question(Question: "WHatsdsfdsfc up?", Answers: ["aaa", "bbb", "ccc", "ddd"], Answer: 1), Question(Question: "WHatsyolooo up?", Answers: ["aaa", "bbb", "ccc", "ddd"], Answer: 2), Question(Question: "WHatsapppp up?", Answers: ["aaa", "bbb", "ccc", "ddd"], Answer: 3)]
+        nextButton.isHidden = true
+        nextButton.isEnabled = false
+        
+        Questions = [Question(Question: "What DON'T variables do", Answers: ["Stores data", "A data store that can have its value changed whenever", "Variables work the same as constants", "You make a variable using the var keyword"], Answer: 2),
+        Question(Question: "All of these are data types in Swift, except for...", Answers: ["Strings", "Boolean", "Int", "Complex numbers"], Answer: 3),
+        Question(Question: "The following is wrong about strings", Answers: ["Contains double quotes around them", "You can combine strings using the concatenation operator (+)", "Multiline string literals are enclosed in three double quotation marks", "A string interpolation is a series of characters enclosed in quotes."], Answer: 3),
+        Question(Question: "Which is correct?", Answers: ["A while statement executes a block of code once.", "Loop statements allow a block of code to be executed repeatedly, depending on the conditions specified in the loop.", "An if statement is used for executing code based on the evaluation of only one condition.", "Simple statements are used to control the flow of execution in a program"], Answer: 1)]
 
-        
-        
         PickQuestion()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,7 +46,6 @@ class ViewController: UIViewController {
     }
     
     func PickQuestion() {
-        
         if Questions.count > 0 {
             QNumber = Int(arc4random_uniform(UInt32(Questions.count)))
             QLabel.text = Questions[QNumber].Question
@@ -53,43 +58,38 @@ class ViewController: UIViewController {
             
             Questions.remove(at: QNumber)
         } else {
-            NSLog("Done!")
-        }
-    }
-  
-    @IBAction func Btn1(_ sender: UIButton) {
-        if AnswerNumber == 0 {
-            PickQuestion()
-        } else {
-            NSLog("Wrong!")
+            
+            // write code for what you want it to do after all questions are completed.
+            NSLog("Completed all questions!")
         }
         
     }
-    
-    @IBAction func Btn2(_ sender: UIButton) {
-        if AnswerNumber == 1 {
+  
+    @IBAction func checkingButtons(_ sender: UIButton) {
+        if AnswerNumber == 0 {
+            print("correct")
+            sender.backgroundColor = .green
+            PickQuestion()
+            
+        } else if AnswerNumber == 1 {
+            print("correct")
+            sender.backgroundColor = .green
+            PickQuestion()
+        } else if AnswerNumber == 2 {
+            print("correct")
+            sender.backgroundColor = .green
+            PickQuestion()
+        } else if AnswerNumber == 3 {
+            print("correct")
+            sender.backgroundColor = .green
             PickQuestion()
         } else {
             NSLog("Wrong!")
         }
     }
     
-    @IBAction func Btn3(_ sender: UIButton) {
-        if AnswerNumber == 2 {
-            PickQuestion()
-        } else {
-            NSLog("Wrong!")
-        }
+    @IBAction func nextButtonTapped(_ sender: UIButton) {
     }
-    
-    @IBAction func Btn4(_ sender: UIButton) {
-        if AnswerNumber == 3 {
-            PickQuestion()
-        } else {
-            NSLog("Wrong!")
-        }
-    }
-    
 }
  
 
