@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044B15CE213F85B5003AF76A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B15CD213F85B5003AF76A /* CardView.swift */; };
 		04563DD1213D992600006627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04563DD0213D992600006627 /* AppDelegate.swift */; };
 		04563DD3213D992600006627 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04563DD2213D992600006627 /* ViewController.swift */; };
 		04563DD6213D992600006627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04563DD4213D992600006627 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		044B15CD213F85B5003AF76A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		04563DCD213D992600006627 /* iOSFlashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSFlashcards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04563DD0213D992600006627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04563DD2213D992600006627 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				04563DD2213D992600006627 /* ViewController.swift */,
+				044B15CD213F85B5003AF76A /* CardView.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			files = (
 				04563DD3213D992600006627 /* ViewController.swift in Sources */,
 				04563DD9213D992600006627 /* iOSFlashcards.xcdatamodeld in Sources */,
+				044B15CE213F85B5003AF76A /* CardView.swift in Sources */,
 				04563DD1213D992600006627 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7C5XTUX6GS;
 				INFOPLIST_FILE = iOSFlashcards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -318,6 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7C5XTUX6GS;
 				INFOPLIST_FILE = iOSFlashcards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

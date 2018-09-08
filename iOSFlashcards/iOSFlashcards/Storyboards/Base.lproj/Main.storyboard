@@ -11,6 +11,21 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="5DV-cw-4fq">
+            <objects>
+                <viewController id="6BL-we-dni" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VoE-LJ-2Lx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="e5H-2x-HVw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R2i-CY-68H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-538" y="140"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSFlashcards" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,17 +33,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56J-Cs-e5a">
-                                <rect key="frame" x="30" y="90" width="315" height="522"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56J-Cs-e5a" customClass="CardView" customModule="iOSFlashcards" customModuleProvider="target">
+                                <rect key="frame" x="30" y="110" width="315" height="502"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHU-No-KXC">
-                                        <rect key="frame" x="8" y="70" width="299" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHU-No-KXC">
+                                        <rect key="frame" x="8" y="85" width="299" height="61"/>
+                                        <string key="text">Label
+
+</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="74w-K8-p9u">
-                                        <rect key="frame" x="10" y="177.5" width="295" height="294.5"/>
+                                        <rect key="frame" x="10" y="157.5" width="295" height="294.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="QQY-uy-Nxg">
                                                 <rect key="frame" x="0.0" y="0.0" width="295" height="62.5"/>
@@ -38,7 +56,8 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal">
-                                                    <string key="title">Button</string>
+                                                    <string key="title">Button
+</string>
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -47,7 +66,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="checkingButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HdL-SR-gNP"/>
+                                                    <action selector="btn1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RgE-YA-mwH"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="wK1-bU-FMc">
@@ -58,7 +77,8 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal">
-                                                    <string key="title">Button</string>
+                                                    <string key="title">Button
+</string>
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -67,7 +87,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="checkingButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nt5-iL-AVa"/>
+                                                    <action selector="btn2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ihG-4F-Iu9"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="wNn-aH-QiW">
@@ -78,7 +98,8 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal">
-                                                    <string key="title">Button</string>
+                                                    <string key="title">Button
+</string>
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -87,7 +108,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="checkingButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s52-F2-nHF"/>
+                                                    <action selector="btn3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BGs-5y-bmp"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="9gn-y4-fIt">
@@ -98,7 +119,8 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal">
-                                                    <string key="title">Button</string>
+                                                    <string key="title">Button
+</string>
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -107,7 +129,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="checkingButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RnD-bg-9cB"/>
+                                                    <action selector="btn4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="znM-iO-v5O"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -121,8 +143,11 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xS3-ir-nhm">
-                                        <rect key="frame" x="266" y="492" width="32" height="30"/>
-                                        <state key="normal" title="Next"/>
+                                        <rect key="frame" x="257" y="466" width="41" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="211-7h-RCu"/>
                                         </connections>
@@ -131,7 +156,7 @@
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="74w-K8-p9u" secondAttribute="bottom" constant="50" id="5qQ-pn-0PK"/>
-                                    <constraint firstItem="uHU-No-KXC" firstAttribute="top" secondItem="56J-Cs-e5a" secondAttribute="top" constant="70" id="90e-jE-wYi"/>
+                                    <constraint firstItem="uHU-No-KXC" firstAttribute="top" secondItem="56J-Cs-e5a" secondAttribute="top" constant="85" id="90e-jE-wYi"/>
                                     <constraint firstAttribute="trailing" secondItem="74w-K8-p9u" secondAttribute="trailing" constant="10" id="IXi-95-1aa"/>
                                     <constraint firstItem="74w-K8-p9u" firstAttribute="centerX" secondItem="56J-Cs-e5a" secondAttribute="centerX" id="J7L-mn-fxp"/>
                                     <constraint firstAttribute="trailing" secondItem="uHU-No-KXC" secondAttribute="trailing" constant="8" id="Xvr-vw-D8k"/>
@@ -148,7 +173,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Flashcards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uF2-o3-xPh">
-                                <rect key="frame" x="30" y="39" width="315" height="33"/>
+                                <rect key="frame" x="30" y="55" width="315" height="33"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -159,8 +184,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="56J-Cs-e5a" secondAttribute="bottom" constant="55" id="NUQ-Fj-fjy"/>
                             <constraint firstItem="56J-Cs-e5a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="OdW-9q-W3m"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uF2-o3-xPh" secondAttribute="trailing" constant="30" id="SEG-ne-zab"/>
-                            <constraint firstItem="uF2-o3-xPh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="19" id="bII-oi-og9"/>
-                            <constraint firstItem="56J-Cs-e5a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="loZ-eq-1hi"/>
+                            <constraint firstItem="uF2-o3-xPh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="bII-oi-og9"/>
+                            <constraint firstItem="56J-Cs-e5a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="loZ-eq-1hi"/>
                             <constraint firstItem="uF2-o3-xPh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mbk-pz-ajr"/>
                             <constraint firstItem="uF2-o3-xPh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="omT-5e-GMx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="56J-Cs-e5a" secondAttribute="trailing" constant="30" id="ujI-I7-BNX"/>

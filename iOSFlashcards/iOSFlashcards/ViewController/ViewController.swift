@@ -65,30 +65,89 @@ class ViewController: UIViewController {
         
     }
   
-    @IBAction func checkingButtons(_ sender: UIButton) {
+    @IBAction func btn1(_ sender: UIButton) {
         if AnswerNumber == 0 {
             print("correct")
-            sender.backgroundColor = .green
-            PickQuestion()
-            
-        } else if AnswerNumber == 1 {
-            print("correct")
-            sender.backgroundColor = .green
-            PickQuestion()
-        } else if AnswerNumber == 2 {
-            print("correct")
-            sender.backgroundColor = .green
-            PickQuestion()
-        } else if AnswerNumber == 3 {
-            print("correct")
-            sender.backgroundColor = .green
-            PickQuestion()
+            sender.backgroundColor = UIColor(red: 119/255, green: 221/255, blue: 119/255, alpha: 1)
+            nextButton.isHidden = false
+            nextButton.isEnabled = true
         } else {
             NSLog("Wrong!")
+            print("button 1")
+            sender.layer.borderColor = UIColor(red: 227/255, green: 46/255, blue: 46/255, alpha: 1).cgColor
+            sender.layer.borderWidth = 2
+            sender.shake()
         }
     }
     
+    @IBAction func btn2(_ sender: UIButton) {
+        if AnswerNumber == 1 {
+            print("correct")
+            sender.backgroundColor = UIColor(red: 119/255, green: 221/255, blue: 119/255, alpha: 1)
+            nextButton.isHidden = false
+            nextButton.isEnabled = true
+        } else {
+            NSLog("Wrong!")
+            sender.layer.borderColor = UIColor(red: 227/255, green: 46/255, blue: 46/255, alpha: 1).cgColor
+            sender.layer.borderWidth = 2
+            sender.shake()
+        }
+    }
+    
+    @IBAction func btn3(_ sender: UIButton) {
+        if AnswerNumber == 2 {
+            print("correct")
+            sender.backgroundColor = UIColor(red: 119/255, green: 221/255, blue: 119/255, alpha: 1)
+            nextButton.isHidden = false
+            nextButton.isEnabled = true
+        } else {
+            NSLog("Wrong!")
+            sender.layer.borderColor = UIColor(red: 227/255, green: 46/255, blue: 46/255, alpha: 1).cgColor
+            sender.layer.borderWidth = 2
+            sender.shake()
+        }
+    }
+    
+    @IBAction func btn4(_ sender: UIButton) {
+        if AnswerNumber == 3 {
+            print("correct")
+            sender.backgroundColor = UIColor(red: 119/255, green: 221/255, blue: 119/255, alpha: 1)
+            nextButton.isHidden = false
+            nextButton.isEnabled = true
+        } else {
+            NSLog("Wrong!")
+            sender.layer.borderColor = UIColor(red: 227/255, green: 46/255, blue: 46/255, alpha: 1).cgColor
+            sender.layer.borderWidth = 2
+            sender.shake()
+        }
+    }
+    
+    
+    
+    
     @IBAction func nextButtonTapped(_ sender: UIButton) {
+        PickQuestion()
+        Button[0].backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
+        Button[0].layer.borderColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1).cgColor
+        Button[1].backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
+        Button[1].layer.borderColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1).cgColor
+        Button[2].backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
+        Button[2].layer.borderColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1).cgColor
+        Button[3].backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
+        Button[3].layer.borderColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1).cgColor
+        nextButton.isEnabled = false
+        nextButton.isHidden = true
+    }
+}
+
+extension UIView {
+    
+    func shake() {
+        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        animation.duration = 0.1
+        animation.values = [-10.0, 10.0, -10.0, 10.0, -5.0, 5.0, -2.5, 2.5, 0.0 ]
+        layer.add(animation, forKey: "shake")
     }
 }
  
