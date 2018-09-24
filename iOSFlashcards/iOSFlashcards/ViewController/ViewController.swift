@@ -32,6 +32,9 @@ class ViewController: UIViewController {
         
         // run the game
         pickQuestion()
+        
+        // set the gradient background color
+        view.setGradientBackground(colorOne: Colors.darkerCoral, colorTwo: Colors.coral)
     }
     
     // MARK: - Private Methods

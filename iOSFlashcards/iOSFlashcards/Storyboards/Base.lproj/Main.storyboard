@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mAz-l6-F6f">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,60 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="Ekh-1o-gh9">
+            <objects>
+                <viewController id="mAz-l6-F6f" customClass="MainViewController" customModule="iOSFlashcards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SOL-eS-lgi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Flashcards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIp-xW-Ybp">
+                                <rect key="frame" x="50" y="240" width="275" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Ceb-pl-O7Y"/>
+                                    <constraint firstAttribute="width" constant="275" id="CxW-Ys-JXY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="33"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JO-ca-xBy">
+                                <rect key="frame" x="50" y="447" width="275" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="H8B-ew-7Yc"/>
+                                    <constraint firstAttribute="height" constant="50" id="ykc-gg-dJs"/>
+                                </constraints>
+                                <state key="normal" title="Generate Flashcards">
+                                    <color key="titleColor" red="0.82352941176470584" green="0.043137254901960784" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="TDV-Ie-BEQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.43137254899999999" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="jIp-xW-Ybp" firstAttribute="top" secondItem="M4y-Xw-HWo" secondAttribute="top" constant="220" id="2f9-Bv-51N"/>
+                            <constraint firstItem="M4y-Xw-HWo" firstAttribute="trailing" secondItem="0JO-ca-xBy" secondAttribute="trailing" constant="50" id="TXr-oZ-6GZ"/>
+                            <constraint firstItem="0JO-ca-xBy" firstAttribute="centerX" secondItem="SOL-eS-lgi" secondAttribute="centerX" id="VGC-RR-mjf"/>
+                            <constraint firstItem="jIp-xW-Ybp" firstAttribute="centerX" secondItem="SOL-eS-lgi" secondAttribute="centerX" id="g0U-O0-uNO"/>
+                            <constraint firstItem="0JO-ca-xBy" firstAttribute="leading" secondItem="M4y-Xw-HWo" secondAttribute="leading" constant="50" id="gHu-VD-EUw"/>
+                            <constraint firstItem="M4y-Xw-HWo" firstAttribute="bottom" secondItem="0JO-ca-xBy" secondAttribute="bottom" constant="170" id="kOA-Ix-ry8"/>
+                            <constraint firstItem="jIp-xW-Ybp" firstAttribute="leading" secondItem="M4y-Xw-HWo" secondAttribute="leading" constant="50" id="nvE-hl-oHQ"/>
+                            <constraint firstItem="M4y-Xw-HWo" firstAttribute="trailing" secondItem="jIp-xW-Ybp" secondAttribute="trailing" constant="50" id="v29-Pr-Q9z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M4y-Xw-HWo"/>
+                    </view>
+                    <connections>
+                        <outlet property="generateFlashCardsButton" destination="0JO-ca-xBy" id="kUc-cG-m8r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kCL-eT-PzB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-543.20000000000005" y="139.880059970015"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
