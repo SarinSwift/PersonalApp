@@ -8,65 +8,68 @@
 
 import UIKit
 
-struct Question {
-    var Question: String!
-    var Answers: [String]!
-    var Answer: Int!
-}
-
 class ViewController: UIViewController {
     
-    @IBOutlet var Button: [UIButton]!
-    @IBOutlet weak var QLabel: UILabel!
+    // MARK: - Instance Variables
+    var questions: [Question]!
+    var currentQuestion: Question!
+    
+    // MARK: - Subviews
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet var answerButtons: [UIButton]!
     @IBOutlet weak var nextButton: UIButton!
     
-    var Questions = [Question]()
-    var QNumber = Int()
-    var AnswerNumber = Int()
-    
-    
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // setup instance variables
+        questions = createAllQuestions()
+        
+        // setup subviews
         nextButton.isHidden = true
         nextButton.isEnabled = false
         
-        Questions = [Question(Question: "What DON'T variables do", Answers: ["Stores data", "A data store that can have its value changed whenever", "Variables work the same as constants", "You make a variable using the var keyword"], Answer: 2),
-        Question(Question: "All of these are data types in Swift, except for...", Answers: ["Strings", "Boolean", "Int", "Complex numbers"], Answer: 3),
-        Question(Question: "The following is wrong about strings", Answers: ["Contains double quotes around them", "You can combine strings using the concatenation operator (+)", "Multiline string literals are enclosed in three double quotation marks", "A string interpolation is a series of characters enclosed in quotes."], Answer: 3),
-        Question(Question: "Which is correct?", Answers: ["A while statement executes a block of code once.", "Loop statements allow a block of code to be executed repeatedly, depending on the conditions specified in the loop.", "An if statement is used for executing code based on the evaluation of only one condition.", "Simple statements are used to control the flow of execution in a program"], Answer: 1)]
-
-        PickQuestion()
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // run the game
+        pickQuestion()
     }
     
-    func PickQuestion() {
-        if Questions.count > 0 {
-            QNumber = Int(arc4random_uniform(UInt32(Questions.count)))
-            QLabel.text = Questions[QNumber].Question
+    // MARK: - Private Methods
+    func createAllQuestions() -> [Question] {
+        let firstQuestion = Question(question: "What DON'T variables do", possibleAnswers: ["Stores data", "A data store that can have its value changed whenever", "Variables work the same as constants", "You make a variable using the var keyword"], correctAnswerIndex: 2)
+        let secondQuestion = Question(question: "All of these are data types in Swift, except for...", possibleAnswers: ["Strings", "Boolean", "Int", "Complex numbers"], correctAnswerIndex: 3)
+        let thirdQuestion = Question(question: "The following is wrong about strings", possibleAnswers: ["Contains double quotes around them", "You can combine strings using the concatenation operator (+)", "Multiline string literals are enclosed in three double quotation marks", "A string interpolation is a series of characters enclosed in quotes."], correctAnswerIndex: 3)
+        let fourthQuestion = Question(question: "Which is correct?", possibleAnswers: ["A while statement executes a block of code once.", "Loop statements allow a block of code to be executed repeatedly, depending on the conditions specified in the loop.", "An if statement is used for executing code based on the evaluation of only one condition.", "Simple statements are used to control the flow of execution in a program"], correctAnswerIndex: 1)
+        return [firstQuestion, secondQuestion, thirdQuestion, fourthQuestion]
+    }
+    
+    func pickQuestion() {
+        if questions.count > 0 {
             
-            AnswerNumber = Questions[QNumber].Answer
+            // set the current question
+            let randomQuestionIndex = Int(arc4random_uniform(UInt32(questions.count)))
+            currentQuestion = questions[randomQuestionIndex]
             
-            for i in 0..<Button.count {
-                Button[i].setTitle(Questions[QNumber].Answers[i], for: UIControlState.normal)
+            // set subview text
+            questionLabel.text = currentQuestion.question
+            // enumerate return both the index and the buttons at that index so it can set the title of all 4 buttons
+            for (index, button) in answerButtons.enumerated() {
+                button.setTitle(currentQuestion.possibleAnswers[index], for: .normal)
             }
             
-            Questions.remove(at: QNumber)
+            // remove current question from array
+            questions.remove(at: randomQuestionIndex)
         } else {
             
-            // write code for what you want it to do after all questions are completed.
+            // TODO: write code for what you want it to do after all questions are completed.!!!!!!
             NSLog("Completed all questions!")
+            
         }
-        
     }
   
+    // MARK: - Subview Actions
     @IBAction func btn1(_ sender: UIButton) {
-        if AnswerNumber == 0 {
+        if currentQuestion.correctAnswerIndex == 0 {
             print("correct")
             sender.backgroundColor = UIColor(red: 119/255, green: 221/255, blue: 119/255, alpha: 1)
             nextButton.isHidden = false
@@ -81,7 +84,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btn2(_ sender: UIButton) {
-        if AnswerNumber == 1 {
+        if currentQuestion.correctAnswerIndex == 1 {
             print("correct")
             sender.backgroundColor = UIColor(red: 119/255, green: 221/255, blue: 119/255, alpha: 1)
             nextButton.isHidden = false
@@ -95,7 +98,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btn3(_ sender: UIButton) {
-        if AnswerNumber == 2 {
+        if currentQuestion.correctAnswerIndex == 2 {
             print("correct")
             sender.backgroundColor = UIColor(red: 119/255, green: 221/255, blue: 119/255, alpha: 1)
             nextButton.isHidden = false
@@ -109,7 +112,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btn4(_ sender: UIButton) {
-        if AnswerNumber == 3 {
+        if currentQuestion.correctAnswerIndex == 3 {
             print("correct")
             sender.backgroundColor = UIColor(red: 119/255, green: 221/255, blue: 119/255, alpha: 1)
             nextButton.isHidden = false
@@ -122,36 +125,20 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    
-    
     @IBAction func nextButtonTapped(_ sender: UIButton) {
-        PickQuestion()
-        Button[0].backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
-        Button[0].layer.borderColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1).cgColor
-        Button[1].backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
-        Button[1].layer.borderColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1).cgColor
-        Button[2].backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
-        Button[2].layer.borderColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1).cgColor
-        Button[3].backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
-        Button[3].layer.borderColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1).cgColor
+        // get a new question
+        pickQuestion()
+        
+        // reset all answer buttons
+        for button in answerButtons {
+            button.backgroundColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
+            button.layer.borderColor = UIColor(red: 220/255, green: 220/255, blue: 220/255, alpha: 1).cgColor
+        }
+        
+        // update next button
         nextButton.isEnabled = false
         nextButton.isHidden = true
+        
     }
 }
-
-extension UIView {
-    
-    func shake() {
-        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-        animation.duration = 0.1
-        animation.values = [-10.0, 10.0, -10.0, 10.0, -5.0, 5.0, -2.5, 2.5, 0.0 ]
-        layer.add(animation, forKey: "shake")
-    }
-}
- 
-
-
-
 

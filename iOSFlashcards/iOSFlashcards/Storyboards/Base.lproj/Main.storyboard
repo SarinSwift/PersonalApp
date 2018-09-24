@@ -11,21 +11,6 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="5DV-cw-4fq">
-            <objects>
-                <viewController id="6BL-we-dni" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VoE-LJ-2Lx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="e5H-2x-HVw"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R2i-CY-68H" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-538" y="140"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSFlashcards" customModuleProvider="target" sceneMemberID="viewController">
@@ -193,12 +178,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="QLabel" destination="uHU-No-KXC" id="qXI-Eb-eag"/>
                         <outlet property="nextButton" destination="xS3-ir-nhm" id="ah1-UH-FGL"/>
-                        <outletCollection property="Button" destination="QQY-uy-Nxg" collectionClass="NSMutableArray" id="QN6-hY-zgv"/>
-                        <outletCollection property="Button" destination="wK1-bU-FMc" collectionClass="NSMutableArray" id="uet-Sy-9uc"/>
-                        <outletCollection property="Button" destination="wNn-aH-QiW" collectionClass="NSMutableArray" id="L0U-4J-hRu"/>
-                        <outletCollection property="Button" destination="9gn-y4-fIt" collectionClass="NSMutableArray" id="B7g-Cw-Fdx"/>
+                        <outlet property="questionLabel" destination="uHU-No-KXC" id="mI3-hR-7Wt"/>
+                        <outletCollection property="answerButtons" destination="QQY-uy-Nxg" collectionClass="NSMutableArray" id="rDg-ez-x3c"/>
+                        <outletCollection property="answerButtons" destination="wK1-bU-FMc" collectionClass="NSMutableArray" id="Urb-Uv-z2d"/>
+                        <outletCollection property="answerButtons" destination="wNn-aH-QiW" collectionClass="NSMutableArray" id="B19-Cb-6rO"/>
+                        <outletCollection property="answerButtons" destination="9gn-y4-fIt" collectionClass="NSMutableArray" id="4Lz-Mg-r0Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
