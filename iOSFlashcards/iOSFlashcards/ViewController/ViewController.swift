@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     // MARK: - Instance Variables
     var questions: [Question]!
     var currentQuestion: Question!
+    var course: Courses?
     
     // MARK: - Subviews
     @IBOutlet weak var questionLabel: UILabel!
@@ -24,7 +25,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // setup instance variables
-        questions = createAllQuestions()
+        questions = course?.questions //createAllQuestions()
         
         // setup subviews
         nextButton.isHidden = true
@@ -38,13 +39,6 @@ class ViewController: UIViewController {
     }
     
     // MARK: - Private Methods
-    func createAllQuestions() -> [Question] {
-        let firstQuestion = Question(question: "What DON'T variables do", possibleAnswers: ["Stores data", "A data store that can have its value changed whenever", "Variables work the same as constants", "You make a variable using the var keyword"], correctAnswerIndex: 2)
-        let secondQuestion = Question(question: "All of these are data types in Swift, except for...", possibleAnswers: ["Strings", "Boolean", "Int", "Complex numbers"], correctAnswerIndex: 3)
-        let thirdQuestion = Question(question: "The following is wrong about strings", possibleAnswers: ["Contains double quotes around them", "You can combine strings using the concatenation operator (+)", "Multiline string literals are enclosed in three double quotation marks", "A string interpolation is a series of characters enclosed in quotes."], correctAnswerIndex: 3)
-        let fourthQuestion = Question(question: "Which is correct?", possibleAnswers: ["A while statement executes a block of code once.", "Loop statements allow a block of code to be executed repeatedly, depending on the conditions specified in the loop.", "An if statement is used for executing code based on the evaluation of only one condition.", "Simple statements are used to control the flow of execution in a program"], correctAnswerIndex: 1)
-        return [firstQuestion, secondQuestion, thirdQuestion, fourthQuestion]
-    }
     
     func pickQuestion() {
         if questions.count > 0 {
@@ -60,7 +54,7 @@ class ViewController: UIViewController {
                 button.setTitle(currentQuestion.possibleAnswers[index], for: .normal)
             }
             
-            // remove current question from array
+            // remove current question from array to not repeat questions
             questions.remove(at: randomQuestionIndex)
         } else {
             

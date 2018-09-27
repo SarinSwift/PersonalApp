@@ -17,4 +17,6 @@ struct Colors {
     static let coral = UIColor(red: 1.5, green: 0.46, blue: 0.46, alpha: 1.0)
     static let darkRed = UIColor(red: 0.92, green: 0.07, blue: 0.1, alpha: 1.0)
     static let lightOrange = UIColor(red: 1.0, green: 0.72, blue: 0.29, alpha: 1.0)
+    static let hotPink = UIColor(red: 0.82, green: 0.03, blue: 0.33, alpha: 1.0)
+    static let yellow = UIColor(red: 0.85, green: 0.88, blue: 0.08, alpha: 1.0)
 }
