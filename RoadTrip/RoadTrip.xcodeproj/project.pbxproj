@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		048B92F8218B7E7600697AB2 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B92F7218B7E7600697AB2 /* LocationSearchTable.swift */; };
 		049FC52C2184F2410039D762 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FC52B2184F2410039D762 /* AppDelegate.swift */; };
 		049FC52E2184F2410039D762 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FC52D2184F2410039D762 /* ViewController.swift */; };
 		049FC5312184F2410039D762 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049FC52F2184F2410039D762 /* Main.storyboard */; };
 		049FC5332184F2420039D762 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049FC5322184F2420039D762 /* Assets.xcassets */; };
 		049FC5362184F2420039D762 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049FC5342184F2420039D762 /* LaunchScreen.storyboard */; };
+		049FD69A2186331200F67A17 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049FD6992186331200F67A17 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		048B92F7218B7E7600697AB2 /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		049FC5282184F2410039D762 /* RoadTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoadTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049FC52B2184F2410039D762 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		049FC52D2184F2410039D762 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		049FC5322184F2420039D762 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		049FC5352184F2420039D762 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		049FC5372184F2420039D762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		049FD6992186331200F67A17 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049FD69A2186331200F67A17 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,7 @@
 			children = (
 				049FC52A2184F2410039D762 /* RoadTrip */,
 				049FC5292184F2410039D762 /* Products */,
+				049FD6982186331200F67A17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +62,21 @@
 			children = (
 				049FC52B2184F2410039D762 /* AppDelegate.swift */,
 				049FC52D2184F2410039D762 /* ViewController.swift */,
-				049FC52F2184F2410039D762 /* Main.storyboard */,
+				048B92F7218B7E7600697AB2 /* LocationSearchTable.swift */,
 				049FC5322184F2420039D762 /* Assets.xcassets */,
+				049FC52F2184F2410039D762 /* Main.storyboard */,
 				049FC5342184F2420039D762 /* LaunchScreen.storyboard */,
 				049FC5372184F2420039D762 /* Info.plist */,
 			);
 			path = RoadTrip;
+			sourceTree = "<group>";
+		};
+		049FD6982186331200F67A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				049FD6992186331200F67A17 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048B92F8218B7E7600697AB2 /* LocationSearchTable.swift in Sources */,
 				049FC52E2184F2410039D762 /* ViewController.swift in Sources */,
 				049FC52C2184F2410039D762 /* AppDelegate.swift in Sources */,
 			);
