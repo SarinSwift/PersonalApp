@@ -18,14 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Flashcards" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIp-xW-Ybp">
-                                <rect key="frame" x="15" y="20" width="216.5" height="45.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stacks - Flashcards" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIp-xW-Ybp">
+                                <rect key="frame" x="16" y="81" width="276" height="46"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="33"/>
                                 <color key="textColor" red="1" green="0.72156862745098038" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="irl-La-0iw">
-                                <rect key="frame" x="16" y="74" width="343" height="573"/>
+                                <rect key="frame" x="27" y="135" width="321" height="512"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aWB-r6-BrX">
                                     <size key="itemSize" width="50" height="50"/>
@@ -42,8 +42,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kz0-8h-MLs">
-                                                    <rect key="frame" x="4" y="15" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="3.5" y="14.5" width="44" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -74,11 +74,11 @@
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="M4y-Xw-HWo" firstAttribute="bottom" secondItem="irl-La-0iw" secondAttribute="bottom" constant="20" id="CcK-dy-8Mv"/>
-                            <constraint firstItem="jIp-xW-Ybp" firstAttribute="top" secondItem="M4y-Xw-HWo" secondAttribute="top" id="YLh-Ol-jQi"/>
-                            <constraint firstItem="M4y-Xw-HWo" firstAttribute="trailing" secondItem="irl-La-0iw" secondAttribute="trailing" constant="16" id="bbD-v1-6Dc"/>
-                            <constraint firstItem="irl-La-0iw" firstAttribute="leading" secondItem="M4y-Xw-HWo" secondAttribute="leading" constant="16" id="eBq-RM-ii9"/>
+                            <constraint firstItem="jIp-xW-Ybp" firstAttribute="top" secondItem="M4y-Xw-HWo" secondAttribute="top" constant="61" id="YLh-Ol-jQi"/>
+                            <constraint firstItem="M4y-Xw-HWo" firstAttribute="trailing" secondItem="irl-La-0iw" secondAttribute="trailing" constant="27" id="bbD-v1-6Dc"/>
+                            <constraint firstItem="irl-La-0iw" firstAttribute="leading" secondItem="M4y-Xw-HWo" secondAttribute="leading" constant="27" id="eBq-RM-ii9"/>
                             <constraint firstItem="irl-La-0iw" firstAttribute="top" secondItem="jIp-xW-Ybp" secondAttribute="bottom" constant="8.5" id="ky4-Fi-Ccl"/>
-                            <constraint firstItem="jIp-xW-Ybp" firstAttribute="leading" secondItem="M4y-Xw-HWo" secondAttribute="leading" constant="15" id="nvE-hl-oHQ"/>
+                            <constraint firstItem="jIp-xW-Ybp" firstAttribute="leading" secondItem="M4y-Xw-HWo" secondAttribute="leading" constant="16" id="nvE-hl-oHQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="M4y-Xw-HWo"/>
                     </view>
@@ -88,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCL-eT-PzB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4700" y="85"/>
+            <point key="canvasLocation" x="-4700" y="84.107946026986511"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -237,7 +237,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Flashcards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uF2-o3-xPh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stacks - Flashcards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uF2-o3-xPh">
                                 <rect key="frame" x="30" y="55" width="315" height="33"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
                                 <color key="textColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>

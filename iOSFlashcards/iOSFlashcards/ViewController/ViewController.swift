@@ -35,11 +35,10 @@ class ViewController: UIViewController {
         pickQuestion()
         
         // set the gradient background color
-        view.setGradientBackground(colorOne: Colors.darkerCoral, colorTwo: Colors.coral)
+        view.setGradientBackground(colorOne: Colors.yellow, colorTwo: Colors.lightOrange)
     }
     
     // MARK: - Private Methods
-    
     func pickQuestion() {
         if questions.count > 0 {
             

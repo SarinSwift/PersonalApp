@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
     
     var selectedCourse: Courses?
-    var flashcardsGenres = [Courses(courseName: "iOS", questions: Question.ios),Courses(courseName: "python", questions: Question.python),Courses(courseName:"DJango", questions: nil),Courses(courseName: "C++", questions: nil),Courses(courseName: "coming soon...", questions: nil),Courses(courseName: "coming soon...", questions: nil),Courses(courseName: "coming soon...", questions: nil)]
+    var flashcardsGenres = [Courses(courseName: "iOS", questions: Question.ios),Courses(courseName: "python", questions: Question.python),Courses(courseName:"data structures", questions: Question.dataStructures),Courses(courseName: "C++", questions: Question.cPlusPlus),Courses(courseName: "OOP", questions: Question.oop),Courses(courseName: "html", questions: Question.html),Courses(courseName: "data science", questions: Question.dataScience)]
     
 //    @IBOutlet weak var generateFlashCardsButton: UIButton!
     
@@ -24,26 +24,15 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         
-        let width = view.frame.size.width / 4
-        let height = view.frame.size.height / 4
+        // width and height sets the collectionviewc cell
+        let width = (view.frame.size.width) / 4.3
+        let height = (view.frame.size.height) / 4.3
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: height, height: width)
         
         collectionView.delegate = self
         collectionView.dataSource = self
-//        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "collectionViewCell")
-//        collectionView.register(CourseCell.self, forCellWithReuseIdentifier: "collectionViewCell")
         
-
-        
-        // set gradient background color for the main view controller
-//        view.setGradientBackground(colorOne: Colors.darkerCoral, colorTwo: Colors.coral)
-//        generateFlashCardsButton.setGradientBackground(colorOne: Colors.darkRed, colorTwo: Colors.lightOrange)
-        
-        
-        // set rounded corners for the button on the main page
-//        self.generateFlashCardsButton.layer.cornerRadius = 8
     }
     
     override func didReceiveMemoryWarning() {
@@ -83,7 +72,6 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         navigationController?.pushViewController(ViewController(), animated: true)
         
-//        let name = flashcardsGenres[indexPath.row]
     }
     
 
